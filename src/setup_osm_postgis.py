@@ -55,11 +55,12 @@ def setup_osm_postgis(
 
     Example:
         >>> setup_osm_postgis(
-        ...     osm_url="https://download.geofabrik.de/north-america/us/arizona-latest-free.shp.zip", db_name="arizona", load_shapefiles=["places_a", "pois"]
+        ...     osm_url="        osm_url="https://download.geofabrik.de/north-america/us/nebraska/nebraska-latest-free.shp.zip",
+", db_name="nebraska", load_shapefiles=["places_a", "pois"]
         ... )
     """
 
-# Step 1: Setup data directory
+ # Step 1: Setup data directory
     if data_dir is None:
         data_dir = Path(f"../data/{db_name}")
     else:
@@ -214,4 +215,3 @@ def setup_osm_postgis(
     conn.close()
 
     print("Database connection closed")
-    raise NotImplementedError("setup_osm_postgis() is not implemented. Complete this function before running it.")
